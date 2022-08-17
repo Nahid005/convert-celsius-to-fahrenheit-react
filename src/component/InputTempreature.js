@@ -8,11 +8,11 @@ const scaleName = {
 class InputTempreature extends React.Component{
     
     render() {
-        const {onchangeHandelar, tempearature , scale } = this.props
+        const {onchangeHandelar, tempearature, scale  } = this.props
         return(
             <fieldset>
                 <legend> input {scaleName[scale]} </legend>
-                <input type ='text' value={tempearature}  onChange={onchangeHandelar}/>
+                <input type ='text' value={tempearature}  onChange={(e) => onchangeHandelar(e,scale) }/>
             </fieldset>
         )
     }
